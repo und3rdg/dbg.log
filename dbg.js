@@ -1,11 +1,20 @@
 // jshint
 /* exported cls, dbg
 */
+/* 
+ * ************************************************** 
+ * Use it in same way as console.log / group / table
+ * Normal user will not see output in console devtools, unless 
+ * in your browser local storage is set item `debug` with value `1`.
+ * You cat set it by dbg.on(), dbg.off(), dbg.toggle() directly
+ * from your dev tools console.
+ * **************************************************
+ */
 
 var dbg
 var isDebug = parseInt(window.localStorage.getItem("debug"))
 
-// console.clear() it annoying
+// finger saver - console.clear() is annoying
 var cls = function(){
   "use strict"
   console.clear()
@@ -23,7 +32,7 @@ if(isDebug){
   dbg.table    = function() {}
 }
 
-// turn debug on/off in your devtools
+// turn debug on/off in your devtools console
 dbg.on = function() {
   "use strict"
   console.log("%c debuging mode ON", "background: green; color: white")
