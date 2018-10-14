@@ -15,5 +15,13 @@
     "console"
   ],
   "author": "undg",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/und3rdg/dbg.log.git"
+  },
+  "bugs": {
+    "url": "https://github.com/und3rdg/dbg.log/issues"
+  },
+  "homepage": "https://github.com/und3rdg/dbg.log#readme"
 }
