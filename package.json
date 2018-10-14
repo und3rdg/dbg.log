@@ -1,0 +1,19 @@
+{
+  "name": "dbg.log",
+  "version": "1.0.1",
+  "description": "Extended console.log, on condition from loca storage.",
+  "main": "dbg.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "console",
+    "log",
+    "dbg",
+    "debug",
+    "debugging",
+    "console"
+  ],
+  "author": "undg",
+  "license": "ISC"
+}
