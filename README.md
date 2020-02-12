@@ -16,6 +16,12 @@ You cat set it by writing directly in your dev tools console:
     dbg.on()
     dbg.off()
     dbg.toggle()
+    
+Check status, output to console.log()
+    dbg.status()
+    
+Check status, return bool
+    dbg.isDebug
 
 `cls` is console.clear() - it is just less letters for clearing console to save your fingers.
 
