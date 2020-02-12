@@ -66,3 +66,5 @@ dbg.status = function() {
       console.log("%c debuging mode OFF", "background: red; color: white")
   }
 }
+
+global.dbg = dbg
