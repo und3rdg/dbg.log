@@ -12,7 +12,7 @@
  */
 
 var dbg
-var isDebug = parseInt(window.localStorage.getItem("debug"))
+dbg.isDebug = parseInt(window.localStorage.getItem("debug"))
 
 // finger saver - console.clear() is annoying
 var cls = function(){
@@ -20,7 +20,7 @@ var cls = function(){
   console.clear()
 }
 
-if(isDebug){
+if(dbg.isDebug){
   dbg          = console.log
   dbg.group    = console.group
   dbg.groupEnd = console.groupEnd
@@ -55,5 +55,14 @@ dbg.toggle = function() {
       break;
     default:
       dbg.on()
+  }
+}
+
+dbg.status = function() {
+  "use strict"
+  if(dbg.isDebug) {
+    console.log("%c debuging mode ON", "background: green; color: white")
+  } else {
+      console.log("%c debuging mode OFF", "background: red; color: white")
   }
 }
