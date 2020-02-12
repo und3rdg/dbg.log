@@ -16,55 +16,56 @@ dbg.isDebug = parseInt(window.localStorage.getItem("debug"))
 
 // finger saver - console.clear() is annoying
 var cls = function(){
-  "use strict"
-  console.clear()
+    "use strict"
+    console.clear()
 }
 
 if(dbg.isDebug){
-  dbg          = console.log
-  dbg.group    = console.group
-  dbg.groupEnd = console.groupEnd
-  dbg.table    = console.table
+    dbg          = console.log
+    dbg.group    = console.group
+    dbg.groupEnd = console.groupEnd
+    dbg.table    = console.table
 } else {
-  dbg          = function() {}
-  dbg.group    = function() {}
-  dbg.groupEnd = function() {}
-  dbg.table    = function() {}
+    dbg          = function() {}
+    dbg.group    = function() {}
+    dbg.groupEnd = function() {}
+    dbg.table    = function() {}
 }
 
 // turn debug on/off in your devtools console
 dbg.on = function() {
-  "use strict"
-  console.log("%c debuging mode ON", "background: green; color: white")
-  window.localStorage.setItem("debug", 1)
-  isDebug = 1
+    "use strict"
+    console.log("%c debuging mode ON", "background: green; color: white")
+    window.localStorage.setItem("debug", 1)
+    isDebug = 1
 }
 
 dbg.off = function() {
-  "use strict"
-  console.log("%c debuging mode OFF", "background: red; color: white")
-  window.localStorage.setItem("debug", 0)
-  isDebug = 0
+    "use strict"
+    console.log("%c debuging mode OFF", "background: red; color: white")
+    window.localStorage.setItem("debug", 0)
+    isDebug = 0
 }
 
 dbg.toggle = function() {
-  "use strict"
-  switch (isDebug) {
-    case 1:
-      dbg.off()
-      break;
-    default:
-      dbg.on()
-  }
+    "use strict"
+    switch (isDebug) {
+        case 1:
+            dbg.off()
+            break;
+        default:
+            dbg.on()
+    }
 }
 
 dbg.status = function() {
-  "use strict"
-  if(dbg.isDebug) {
-    console.log("%c debuging mode ON", "background: green; color: white")
-  } else {
-      console.log("%c debuging mode OFF", "background: red; color: white")
-  }
+    "use strict"
+    if(dbg.isDebug) {
+        console.log("%c debuging mode ON", "background: green; color: white")
+    } else {
+        console.log("%c debuging mode OFF", "background: red; color: white")
+    }
 }
 
 global.dbg = dbg
+global.cls = cls
